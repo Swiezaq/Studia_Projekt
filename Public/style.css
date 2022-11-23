@@ -1,0 +1,311 @@
+:root {
+	--Kolor_Tła:yellowgreen;
+	--Kolor_Focusa:lightgreen;
+}
+
+* {	
+	padding:0;
+	margin:0;
+	font-family: Verdana;
+	text-decoration: none;
+	color: black;	
+}
+
+#Krzykacz {
+	text-align: center;
+	padding:5px;
+	background-color: red;
+	border: 2px solid darkred;
+}
+
+#Guzik_Zamowieniaaa:active,#Guzik:active {
+	background-color: green;
+	
+}
+
+html {
+	background-image: url('IMG/Tło.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover;
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+}
+
+.container {
+	margin: 1%;
+	padding: 1%;
+	overflow: hidden;
+}
+
+.Zakładka_Box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	background-color: rgb(6, 155, 6);
+	padding: 20px;
+	border: 2px solid green;
+	}
+
+.Zakładka a {
+	padding: 15px;	
+	margin:0 auto;
+	background-color: rgb(6, 155, 6);	
+
+	}
+
+.Zakładka:hover {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    z-index: 0;
+	background-color: green;
+}
+
+.Header {	
+	min-width: 475px;
+	width: 50%;
+	margin: 5%;
+	padding: 2%;
+	background-color:  var(--Kolor_Tła);
+	overflow: hidden;
+	margin: auto;
+}
+
+#RTX {	
+	margin: 0 auto;
+	padding: 5px;
+	background-color:  var(--Kolor_Tła);
+	overflow: hidden;
+	text-align: center;
+}
+
+#RTX_Obrazek {		
+	max-width: 100%;
+	height: auto;
+	transition-duration: 3s;
+    margin: 0 auto;
+    display: block;
+}
+
+#RTX_Obrazek:hover {		
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    z-index: 0;
+}
+
+
+.Dane, .Adres, .Płatność {	
+	min-width: 475px;
+	width: 50%;
+	margin: 5%;
+	padding: 10px 2% 10px 2%;
+	background-color:  var(--Kolor_Tła);
+	overflow: hidden;
+    margin: auto;
+}
+
+.tabelka{
+	margin: 10px;
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.tabelka > table > thead > tr > td {
+	background-color:  var(--Kolor_Tła);
+	padding: 5px;
+	margin: 10px;
+	text-align: center;
+	
+}
+
+.tabelka > table  {
+
+	padding: 5px;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+#wiersze > tr > td {	
+	background-color: whitesmoke;
+	padding: 5px;
+	text-align: center;
+}
+
+.Stopka > p {	
+	min-width: 475px;
+	width: 50%;
+	margin: 5%;
+	padding: 2%;
+	background-color:  black;
+	color: white;
+	overflow: hidden;
+	text-align: right;
+	margin: auto;
+}
+
+.Tytuł {
+	text-align:left;
+}
+
+.Tytek {
+	text-align:center;
+}
+
+.Migacz {animation: blinker 1s linear infinite;
+}
+  
+@keyframes blinker {50% {opacity: 0;}
+}
+
+input[type=text],input[type=tel],input[type=email],textarea[type=text] {
+    padding: 12px 20px;
+}
+
+textarea[type=text]:focus,input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus {
+    background-color: var(--Kolor_Focusa);
+}
+
+.Pola_Pudełko {
+	display: flex;
+	flex-direction: column;	
+	}
+
+.Pola {
+	display: flex;
+	flex-direction: row;
+    border: 2px solid white;
+	background-color: rgb(171, 211, 91);
+	border-radius: 10px;
+	margin:5px 1px;
+	overflow: hidden;
+}
+	
+.Span_Pudełko {
+	min-width: 200px;
+	max-width: 30%;
+	margin: auto;
+	margin-left: 10px;
+	overflow: hidden;	
+}
+
+.Pola_Tekstowe {
+	min-width: 200px;
+	width: 90%;
+	overflow: hidden;
+	padding: 10px;
+	margin-right: 8px;		
+}
+
+.form-control {
+	min-width: 200px;
+	width: 90%;
+	overflow: hidden;
+	border: 1px solid white;
+	border-radius: 10px;	
+}
+
+.Pola_Tekstowe:focus {
+	background-color: var(--Kolor_Focusa);
+}
+
+#Pola_Płatność {
+	padding-top: 5px;
+}
+#pan_Pudełko_Płatność{
+	max-width:30%;
+}
+
+#Pola_Adres {
+	min-height: 100px;	
+}
+
+#Pola_Adres_Tekst {
+	min-height: 200px;	
+}
+
+.Tekst {
+	padding:50px;
+}
+
+#Mastercardy {
+	display: flex;
+	justify-content: center;
+	margin-right: 50px;
+}
+
+.Okienka {
+	margin: 12px 20px 12px 20px;
+	text-align: center;
+}
+
+.Guzik {
+	margin:10px;
+	padding: 25px;
+	font-size:large;
+	overflow: hidden;
+	text-align: center;
+}
+
+#Guzik {
+	background-color: rgb(79, 112, 12);
+	border: 1px solid rgb(79, 112, 12);
+	color: white;
+	border-radius: 50px;
+	margin:10px;
+	padding: 25px;
+	font-size:large;
+	overflow: hidden;
+}
+
+.Guzik_Zamowienia {
+	margin:10px;
+	padding: 25px;
+	font-size:large;
+	overflow: hidden;
+	text-align: center;
+}
+
+#Guzik_Zamowieniaaa {
+	background-color: rgb(79, 112, 12);
+	border: 1px solid rgb(79, 112, 12);
+	color: white;
+	border-radius: 50px;
+	margin:10px;
+	padding: 25px;
+	font-size:large;
+	overflow: hidden;
+}
+
+#Mastercardy {
+	padding-right: 25px;
+}
+
+.Opis {
+	font-family: Verdana;	
+	font-size:large;
+}
+@media (max-width: 1250px) {
+	.Pola {
+		flex-direction: column;
+	}
+
+	#Mastercardy {
+		padding-left: 50px;
+	}
+
+	.Span_Pudełko {
+		min-width: 200px;
+		width: 30%;
+		margin: 5px;
+		margin-left: 10px;
+	}
+
+	.Okienka {
+		margin: 12px 15px 12px 15px;
+	}
+}

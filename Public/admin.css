@@ -1,0 +1,285 @@
+:root {
+	--Kolor_Tła_Niebieski:rgba(0, 190, 255, 0.8);
+}
+
+*
+{	
+	padding:0;
+	margin:0;
+	font-family: Verdana;
+	text-decoration: none;
+	color: black;	
+}
+
+input {
+	width: 66px;
+	margin: 2px;
+	padding: 2px;
+	font-size: medium;
+	border-radius: 5px;
+}
+html {
+	background-image: url('IMG/Tło_Admin.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover;
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+}
+
+.container {
+	margin: 1%;
+	padding: 1%;
+	overflow: hidden;	
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+
+}
+.tabelka{
+	margin: 10px;
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.tabelka > table > thead > tr > td {
+	background-color:  var(--Kolor_Tła);
+	padding: 5px;
+	margin: 10px;
+	text-align: center;
+	
+}
+
+.tabelka > table  {
+
+	padding: 5px;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+#wiersze > tr > td {	
+	background-color: whitesmoke;
+	padding: 5px;
+	text-align: center;
+}
+
+tr {	
+	background-color:  rgba(0, 130, 255, 0.9);
+	padding: 5px;
+	text-align: center;
+}
+
+#mapka {
+	font-size: 8px;
+}
+
+.Guzik_Zamowienia {
+	margin:10px;
+	padding: 25px;
+	font-size:large;
+	overflow: hidden;
+	text-align: center;
+}
+
+#Guzik_Zamowieniaaa {
+	background-color: rgba(0, 130, 255, 0.9);
+	border: 1px solid rgba(0, 130, 255, 0.9);
+	color: white;
+	border-radius: 50px;
+	margin:10px;
+	padding: 25px;
+	font-size:large;
+	overflow: hidden;
+}
+
+#Guzik_Zamowieniaaa:active,#Guzik:active {
+	background-color: rgba(0, 150, 255, 1);
+}
+
+
+.Zakładka_Box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	background-color: rgba(0, 130, 255, 0.9);
+	padding: 20px;
+	}
+
+.Zakładka a {
+	padding: 15px;	
+	margin:0 auto;
+
+	}
+
+.Zakładka:hover {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    z-index: 0;
+}
+
+.Witaj, .Dane, .Formularz_Box, .Poka_Tabele, .Zakładka_Box {
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.Witaj {
+	padding: 10px 2% 10px 2%;
+	overflow: hidden;	
+	background-color: var(--Kolor_Tła_Niebieski);
+	text-align: center;
+	margin: 1% 20% 1% 20%;
+
+}
+.Dane {
+	
+	display: flex;
+	justify-content: center;
+	background-color: var(--Kolor_Tła_Niebieski);
+	padding: 5px;
+	margin: 1% 20% 1% 20%;
+}
+
+table {
+	padding: 5px;
+	margin: 1%;
+}
+
+th {
+	background-color: rgba(0, 130, 255, 1);
+	padding: 10px 5% 10px 5%;
+}
+
+td {
+	background-color: rgba(0, 150, 255, 0.9);
+	padding: 2px 1% 2px 1%;
+}
+
+p {
+	padding: 15px;
+}
+
+.Formularz_Box {
+	background-color: var(--Kolor_Tła_Niebieski);
+	padding: 5px;
+	text-align: center;
+	margin: 1% 20% 1% 20%;
+}
+
+.Formularz{
+	padding: 5px;
+	text-align: center;
+}
+
+#Zatwierdzajka {
+	text-align: center;
+}
+
+
+#Ustaw_Ile {
+	margin-right: 25px;
+}
+.Pstryczek {
+	padding: 5px;
+	display: flex;
+	flex-direction: row;	
+	justify-content: center;
+}
+
+.ON {
+	background-color: lightblue;;
+	padding: 5px;
+	margin: 0 2% 0 2%;
+	border-radius: 20px;
+}
+
+.ON:hover {
+	transform: scale(1.3);
+	-webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    z-index: 0;
+}
+
+.OFF {
+	background-color: lightblue;
+	padding: 5px;
+	margin: 0 2% 0 2%;
+	border-radius: 20px;
+}
+
+.OFF:hover {
+	transform: scale(1.3);
+	-webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    z-index: 0;
+}
+
+.Poka_Tabele {
+	background-color: var(--Kolor_Tła_Niebieski);
+	padding: 5px;
+	text-align: center;
+	margin: 1%;
+}
+
+input[type=time] {
+	min-width: 40px; 
+	margin:5px;
+	padding:3px;
+    
+}
+
+input[type=text]#Od {
+    padding: 3px 2px;
+
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+	display: none;
+}
+
+#Zakres {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 1350px) {
+	.Witaj {margin: 1% 25% 1% 25%;}
+	.Dane {margin: 1% 25% 1% 25%;}
+	.Formularz_Box {margin: 1% 25% 1% 25%;}
+	.Zakładka_Box {margin: 1% 25% 1% 25%;}
+	}
+	
+@media (max-width: 1350px) and (min-width: 1150px) {
+	.Witaj {margin: 1% 20% 1% 20%;}
+	.Dane {margin: 1% 20% 1% 20%;}
+	.Formularz_Box {margin: 1% 20% 1% 20%;}
+	.Zakładka_Box {margin: 1% 20% 1% 20%;}
+}
+	
+@media (max-width: 1150px) and (min-width: 950px) {
+	.Witaj {margin: 1% 15% 1% 15%;}
+	.Dane {margin: 1% 15% 1% 15%;}
+	.Formularz_Box {margin: 1% 15% 1% 15%;}
+	.Zakładka_Box {margin: 1% 15% 1% 15%;}
+	.Witaj, .Dane, .Formularz_Box, .Poka_Tabele, .Zakładka_Box {font-size:medium;}
+}
+
+@media (max-width: 950px) and (min-width: 700px) {
+	.Witaj {margin: 1% 10% 1% 10%;}
+	.Dane {margin: 1% 10% 1% 10%;}
+	.Formularz_Box {margin: 1% 10% 1% 10%;}
+	.Zakładka_Box {margin: 1% 10% 1% 10%;}
+	.Witaj, .Dane, .Formularz_Box, .Poka_Tabele, .Zakładka_Box {font-size:medium;}
+}
+	
+@media (max-width: 700px) {
+	.Witaj {margin: 1% 5% 1% 5%;}
+	.Dane {margin: 1% 5% 1% 5%;}
+	.Formularz_Box {margin: 1% 5% 1% 5%;}
+	.Zakładka_Box {margin: 1% 5% 1% 5%;}
+	.Witaj, .Dane, .Formularz_Box, .Poka_Tabele, .Zakładka_Box {font-size:small;}
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE HTML> 
+<html lang='pl' id="HTML"> 
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+	<title>106577_Sebastian_Kaput</title>
+    
+	<link rel='stylesheet' href='../../Public/style.css'>
+      
+</head>
+<body onload="Sklep_Status(), Tester_Zera()">
+
+<!-- ==========Główny pojemnik========== -->
+    
+<div class='container'>
+
+<!-- ==========Header========== -->
+
+	<div class="Header">
+        <div id="Krzykacz">  
+            <p id="ALARM">xxx</p>
+        </div>
+
+        <%- include("../partials/tabs"); %>
+        <h1 class="Tytek"><br>GeForce RTX 4090 Ti</h1>
+        <div id="RTX">
+            <img id="RTX_Obrazek" src="../../Public/IMG/Main.PNG" alt=""/>
+        </div>
+
+        <div class="Tekst">
+            <p class="Opis" style="text-indent: 30px;">
+                Do premiery serii GeForce RTX 4000 coraz bliżej, więc oczekuj w najbliższych tygodniach (miesiącach) 
+                regularnej dawki przecieków na temat poszczególnych modeli. Najmocniejszym z nich będzie GeForce RTX 4090 Ti, 
+                którego układ chłodzenia, a konkretnie jego zdjęcia wyciekły niespodziewanie do sieci.
+
+                Potężna dawka VRAM-u, wysokie taktowanie i przepustowość pamięci, (prawie?) pełny rdzeń graficzny AD102 
+                i kosmiczny pobór energii – tak w skrócie można opisać RTX-a 4090 Ti. Co już teraz warto wiedzieć 
+                o flagowcu NVIDIA Lovelace poza tym, że będzie gigantem?
+                
+            </p><br>
+            <h4 class="Opis">Specyfikacja GeForce RTX 4090 Ti. Najlepsza z najlepszych:</H4><br>
+
+                <ul>
+                    <li>Architektura: NVIDIA Lovelace</li>
+                    <li>Rdzeń graficzny: AD102-350</li>
+                    <li>Proces technologiczny: 5 nm (4N TSMC)</li>
+                    <li>Liczba multiprocesorów strumieniowych: 144</li>
+                    <li>Liczba rdzeni CUDA: 18432</li>
+                    <li>Pamięć VRAM: 24-48 GB GDDR6X</li>
+                    <li>Taktowanie pamięci: 24000 MHz</li>
+                    <li>Magistrala pamięci: 384-bit</li>
+                    <li>Interfejs: PCIe 4.0</li>
+                    <li>Pobór mocy (TGP): 600-900 W</li><br>
+                </ul>
+            <h3 style="text-align:center">KUP JUŻ DZISIAJ!</h3>
+        </div>
+
+    </div>
+	
+    <!-- Skrypt pytający o potiwerdzenie wysłania zamówienia -->
+    <script>
+        function confirmation() {
+            if(confirm("Formularz został wypełniony prawidłowo, czy chcesz przesłać zamówienie?")){
+                alert("Zamówienie zostało złożone")
+            }else{
+                alert("Anulowano składanie zamówienia");
+                return false;
+            }
+        }
+    </script>
+<!-- ==========Dane========== -->
+<form action="" method="post" class="Pola_Pudełko" name = "Form" onsubmit="return confirmation()">
+
+	<div class="Dane">
+        <h1 class="Tytuł" id="Twoje Dane">Krok 1: Twoje Dane</h1>
+
+        <div class="Pola">
+            <div class="Span_Pudełko"><span>Imię</span></div>
+            <div class="Pola_Tekstowe">
+                <input required type="text" pattern="[ąćęłńóśźżĄĆĘŁŃÓŚŹŻa-zA-Z'-'\s]*" class="form-control" id="Imie" placeholder="Imię" aria-label="Imię" aria-describedby="addon-wrapping" name="Imie">
+            </div>
+        </div>
+
+        <div class="Pola">
+            <div class="Span_Pudełko"><span>Nazwisko</span></div>
+            <div class="Pola_Tekstowe">
+                <input required type="text" pattern="[ąćęłńóśźżĄĆĘŁŃÓŚŹŻa-zA-Z'-'\s]*" class="form-control" placeholder="Nazwisko" aria-label="Nazwisko" aria-describedby="addon-wrapping" name="Nazwisko">
+            </div>
+        </div>
+
+        <div class="Pola">
+            <div class="Span_Pudełko"><span>e-mail</span></div>
+            <div class="Pola_Tekstowe">
+                <input required type="email" pattern=".+@.+" size="30" class="form-control" placeholder="e-mail" aria-label="e-mail" aria-describedby="addon-wrapping" name="email">
+            </div>
+        </div>
+
+        <div class="Pola">
+            <div class="Span_Pudełko"><span>Numer telefonu</span></div>
+            <div class="Pola_Tekstowe">
+                <input required type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control" placeholder="Format: 123-456-789" aria-label="Numer telefonu" aria-describedby="addon-wrapping" name="Numer_telefonu">
+            </div>        
+        </div>
+       
+    </div>
+
+<!-- ==========Adres========== -->
+    <div class="Adres">
+        <h1 class="Tytuł" id="Twój Adres">Krok 2: Twój adres</h1>
+
+        <div class="Pola" id="Pola_Adres">
+            <div class="Span_Pudełko"><span>Adres</span></div>
+            <div class="Pola_Tekstowe" >
+                <textarea required type="text" class="form-control" id="Pola_Adres_Tekst" placeholder="Adres" aria-label="Adres" aria-describedby="addon-wrapping" name="Adres"></textarea>
+            </div>
+        </div>
+
+        <div class="Pola">
+            <div class="Span_Pudełko"><span>Kod pocztowy</span></div>
+            <div class="Pola_Tekstowe">
+                <input required type="text" pattern="[0-9]{2}-[0-9]{3}" class="form-control" placeholder="Kod pocztowy np.(XX-XXX)" aria-label="Kod pocztowy" aria-describedby="addon-wrapping" name="Kod_pocztowy">
+            </div>
+        </div>
+
+        <div class="Pola">
+            <div class="Span_Pudełko"><span>Kraj</span></div>
+            <div class="Pola_Tekstowe">
+                <input required type="text" pattern="[ąćęłńóśźżĄĆĘŁŃÓŚŹŻa-zA-Z'-'\s]*" class="form-control" placeholder="Kraj" aria-label="Kraj" aria-describedby="addon-wrapping" name="Kraj">
+            </div>        
+        </div>
+    </div>
+
+<!-- ==========Płatność========== -->
+    <div class="Płatność">
+            <h1 class="Tytuł" id="Twoje_Płatności">Krok 3: Rodzaj płatności</h1>
+    
+            <div class="Pola" id="Pola_Płatność">
+                <div class="Span_Pudełko" id="Span_Pudełko_Płatność"><span>Wybierz płatność</span></div>
+
+                <div id="Mastercardy">
+                    <div class="Okienka">
+                        <img id="RTX_Obrazek" src="../../Public/IMG/Visa.PNG" width="30" height="30" alt=""/>
+                        <input required type="radio" name="Opcja_platnosci" value="Visa" name="Visa"> Visa</input>
+
+                    </div>
+
+                    <div class="Okienka">
+                        <img id="RTX_Obrazek" src="../../Public/IMG/AmEx.PNG" width="30" height="30" alt=""/>
+                        <input required type="radio" name="Opcja_platnosci" value="AmEx" name="AmEx"> AmEx </input>
+                        
+                    </div>
+
+                    <div class="Okienka">
+                        <img id="RTX_Obrazek" src="../../Public/IMG/MasterCard.PNG" width="30" height="30" alt=""/>
+                        <input required type="radio" name="Opcja_platnosci" value="Mastercard" name="Mastercard" > Mastercard</input>
+                        
+                    </div>
+
+                    <div class="Okienka">
+                        <img id="RTX_Obrazek" src="../../Public/IMG/Nerka.PNG" width="30" height="30" alt=""/>
+                        <input required type="radio" name="Opcja_platnosci" value="Nerka" name="Nerka"> Nerka</input>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="Pola">
+                <div class="Span_Pudełko"><span>Numer karty</span></div>
+                <div class="Pola_Tekstowe">
+                    <input required type="text" pattern="[0-9]{16}" class="form-control" placeholder="Numer karty (Podaj 16 cyfr)" aria-label="Numer karty" aria-describedby="addon-wrapping" name="Numer_karty">
+                </div>
+            </div>
+    
+            <div class="Pola">
+                <div class="Span_Pudełko"><span>Kod bezpieczeństwa</span></div>
+                <div class="Pola_Tekstowe">
+                    <input required type="text" pattern="[0-9]{3}" class="form-control" placeholder="Kod bezpieczeństwa np: (123)" aria-label="Kod bezpieczeństwa" aria-describedby="addon-wrapping" name="Kod_bezpieczenstwa">
+                </div>
+            </div>
+    
+            <div class="Pola">
+                <div class="Span_Pudełko"><span>Własciciel karty</span></div>
+                <div class="Pola_Tekstowe">
+                    <input required type="text" pattern="[ąćęłńóśźżĄĆĘŁŃÓŚŹŻa-zA-Z'-'\s]*" class="form-control" placeholder="Dokładna nazwa z karty" aria-label="Własciciel karty" aria-describedby="addon-wrapping" name="Wlasciciel_karty">
+                </div>        
+            </div>
+
+            <div class="Guzik">
+                <button id="Guzik" type="submit" onclick=""><h1 class="Migacz">Kup teraz!!!</h1></button>       
+            </div>        
+	</div>
+</form>
+    
+    <!-- ==========Stopka========== -->
+    <footer class="Stopka">
+        <p> Zdam Języki Programowania i Technologie Internetowe  w © 2022 roku. </p>
+    </footer>
+
+    <script src="../../Public/script.js"></script>
+
+</body>
+</html>
